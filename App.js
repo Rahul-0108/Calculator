@@ -54,28 +54,28 @@ export default function App() {
         <View style={styles.calculator}>
           <View style={styles.row}>
             {["1", "2", "3", "+"].map((value, index) => (
-              <Pressable style={styles.buttonCss} android_ripple={{ color: "white" }} onPress={() => pressHandler(value, index)}>
+              <Pressable style={styles.buttonCss} key={index} android_ripple={{ color: "white" }} onPress={() => pressHandler(value, index)}>
                 <Text style={styles.textCss}>{value}</Text>
               </Pressable>
             ))}
           </View>
           <View style={styles.row}>
             {["4", "5", "6", "-"].map((value, index) => (
-              <Pressable style={styles.buttonCss} android_ripple={{ color: "white" }} onPress={() => pressHandler(value, index)}>
+              <Pressable style={styles.buttonCss}  key={index} android_ripple={{ color: "white" }} onPress={() => pressHandler(value, index)}>
                 <Text style={styles.textCss}>{value}</Text>
               </Pressable>
             ))}
           </View>
           <View style={styles.row}>
             {["7", "8", "9", "*"].map((value, index) => (
-              <Pressable style={styles.buttonCss} android_ripple={{ color: "white" }} onPress={() => pressHandler(value, index)}>
+              <Pressable style={styles.buttonCss}  key={index} android_ripple={{ color: "white" }} onPress={() => pressHandler(value, index)}>
                 <Text style={styles.textCss}>{value}</Text>
               </Pressable>
             ))}
           </View>
           <View style={styles.row}>
             {["0", "C", "=", "/"].map((value, index) => (
-              <Pressable style={styles.buttonCss} android_ripple={{ color: "white" }} onPress={() => pressHandler(value, index === 1 ? 4 : index === 2 ? 5 : index)}>
+              <Pressable style={styles.buttonCss} key={index} android_ripple={{ color: "white" }} onPress={() => pressHandler(value, index === 1 ? 4 : index === 2 ? 5 : index)}>
                 <Text style={styles.textCss}>{value}</Text>
               </Pressable>
             ))}
