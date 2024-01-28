@@ -10,10 +10,10 @@ export default function App() {
 
   const pressHandler = (value, index) => {
     if (index === 0 || index === 1 || index === 2) {
-      if (!firstValue) {
-        setFirstValue(Number(value));
+      if (!operator) {
+        setFirstValue(Number(firstValue.toString() + value));
       } else {
-        setSecondValue(Number(value));
+        setSecondValue(Number(secondValue.toString() + value));
       }
     } else if (index === 3) {
       setOperator(value);
